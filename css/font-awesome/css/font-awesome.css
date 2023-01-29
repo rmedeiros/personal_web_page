@@ -1336,3 +1336,8 @@
 .fa-plus-square-o:before {
   content: "\f196";
 }
+
+/* css needed for researchgate icon */
+.fa-researchgate:before {
+  content: "\f1f5";
+}
