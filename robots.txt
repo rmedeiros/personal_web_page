@@ -2,3 +2,5 @@
 
 User-agent: *
 Disallow:
+
+Sitemap: https://raulmedeiros.eus/sitemap.xml
