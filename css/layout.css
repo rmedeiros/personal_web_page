@@ -207,8 +207,8 @@ ul#nav li.current a { color: #F06000; }
 }
 #about .profile-pic {
    position: relative;
-   width: 120px;
-   height: 120px;
+   width: 220px;
+   height: 250px;
    border-radius: 100%;
 }
 #about .contact-details { width: 41.66667%; }
@@ -332,15 +332,11 @@ ul#nav li.current a { color: #F06000; }
     -webkit-animation: iplusd 2s ease;
 }
 
-.photoshop {
-  	width: 90%;
-  	-moz-animation: photoshop 2s ease;
-  	-webkit-animation: photoshop 2s ease;
-}
+
 .spl {
-  	width: 70%;
-  	-moz-animation: spl 2s ease;
-  	-webkit-animation: spl 2s ease;
+  	width: 85%;
+  	-moz-animation: spl 3s ease;
+  	-webkit-animation: spl 3s ease;
 }
 .java {
   	width: 50%;
@@ -352,15 +348,15 @@ ul#nav li.current a { color: #F06000; }
   	-moz-animation: management 2s ease;
   	-webkit-animation: management 2s ease;
 }
-.html5 {
-  	width: 45%;
-  	-moz-animation: html5 2s ease;
-  	-webkit-animation: html5 2s ease;
+.python {
+  	width: 60%;
+  	-moz-animation: python 2s ease;
+  	-webkit-animation: python 2s ease;
 }
-.jquery {
+.dataspaces {
   	width: 50%;
-  	-moz-animation: jquery 2s ease;
-  	-webkit-animation: jquery 2s ease;
+  	-moz-animation: dataspaces 2s ease;
+  	-webkit-animation: dataspaces 2s ease;
 }
 
 .agile {
@@ -376,7 +372,7 @@ ul#nav li.current a { color: #F06000; }
     -webkit-animation: devops 2s ease;
 }
 
-@-moz-keyframes photoshop {
+@-moz-keyframes python {
   0%   { width: 0px;  }
   100% { width: 60%;  }
 }
@@ -387,7 +383,7 @@ ul#nav li.current a { color: #F06000; }
 }
 @-moz-keyframes spl {
   0%   { width: 0px;  }
-  100% { width: 70%;  }
+  100% { width: 85%;  }
 }
 @-moz-keyframes java {
   0%   { width: 0px;  }
@@ -401,7 +397,7 @@ ul#nav li.current a { color: #F06000; }
   0%   { width: 0px;  }
   100% { width: 45%;  }
 }
-@-moz-keyframes jquery {
+@-moz-keyframes dataspaces {
   0%   { width: 0px;  }
   100% { width: 50%;  }
 }
@@ -422,13 +418,13 @@ ul#nav li.current a { color: #F06000; }
     100% { width: 60%;  }
 }
 
-@-webkit-keyframes photoshop {
+@-webkit-keyframes python {
   0%   { width: 0px;  }
   100% { width: 60%;  }
 }
 @-webkit-keyframes spl {
   0%   { width: 0px;  }
-  100% { width: 70%;  }
+  100% { width: 85%;  }
 }
 @-webkit-keyframes java {
   0%   { width: 0px;  }
@@ -442,7 +438,7 @@ ul#nav li.current a { color: #F06000; }
   0%   { width: 0px;  }
   100% { width: 45%;  }
 } 
-@-webkit-keyframes jquery {
+@-webkit-keyframes dataspaces {
   0%   { width: 0px;  }
   100% { width: 50%;  }
 }
