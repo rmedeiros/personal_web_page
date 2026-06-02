@@ -9,7 +9,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300&family=Montserrat:wght@300&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
@@ -22,7 +22,15 @@
   <!-- ═══════════════════════════════════════════ NAV -->
   <nav id="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="#home" class="nav-brand">RM</a>
+      <a href="#home" class="nav-brand" aria-label="Raul Medeiros – home">
+        <svg viewBox="0 0 130 48" width="104" height="38" aria-hidden="true" focusable="false">
+          <text x="65" y="36" font-family="Cormorant Garamond, Georgia, serif" font-weight="300" font-size="40"
+            fill="currentColor" text-anchor="middle" letter-spacing="-1">RM</text>
+          <line x1="28" y1="40" x2="102" y2="40" stroke="#b8936a" stroke-width="0.8"/>
+          <text x="65" y="47" font-family="Montserrat, system-ui, sans-serif" font-weight="300" font-size="6.5"
+            fill="#b8936a" text-anchor="middle" letter-spacing="3.5">RAUL MEDEIROS</text>
+        </svg>
+      </a>
 
       <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
         <span></span>
