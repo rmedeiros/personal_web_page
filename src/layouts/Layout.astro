@@ -1,0 +1,53 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Raul Medeiros's personal web page. Software Engineering PhD & Technology Consultant." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description}>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/favicon2.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+
+        <!-- Print styles -->
+        <style is:global>
+            @media print {
+                @page {
+                    margin: 1cm;
+                }
+                body {
+                    background: white;
+                    color: black;
+                }
+                .no-print {
+                    display: none !important;
+                }
+                .print-only {
+                    display: block !important;
+                }
+                a[href]:after {
+                    content: " (" attr(href) ")";
+                    font-size: 0.8em;
+                    color: #666;
+                }
+                a[href^="#"]:after,
+                a[href^="javascript"]:after {
+                    content: "";
+                }
+            }
+        </style>
+	</head>
+	<body class="bg-primary text-gray-300">
+		<slot />
+	</body>
+</html>

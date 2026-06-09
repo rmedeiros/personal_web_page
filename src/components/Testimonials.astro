@@ -1,0 +1,65 @@
+---
+export interface Props {
+    ui: any;
+}
+
+const { ui } = Astro.props;
+---
+
+<section id="testimonials" class="py-24 bg-secondary text-white relative">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-accent rounded-full mix-blend-multiply filter blur-3xl opacity-5"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-highlight rounded-full mix-blend-multiply filter blur-3xl opacity-5"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="flex flex-col md:flex-row items-center md:items-start">
+            
+            <div class="md:w-2/12 mb-8 md:mb-0 md:text-right">
+                 <h2 class="text-accent font-bold uppercase tracking-widest text-lg md:pr-8 border-b-2 md:border-b-0 md:border-r-2 border-slate-700 pb-2 md:pb-0 inline-block md:block">{ui.testimonials.title}</h2>
+            </div>
+
+            <div class="md:w-10/12">
+                <!-- Simple CSS Scroll Snap Carousel -->
+                <div class="carousel flex overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+                    
+                    <div class="w-full flex-shrink-0 snap-center px-4 md:px-12">
+                         <blockquote class="text-xl md:text-3xl font-light text-gray-300 leading-relaxed text-center">
+                            <p class="mb-8 relative inline-block">
+                                <span class="absolute -top-4 -left-6 text-6xl text-slate-700 opacity-50 font-serif">"</span>
+                                Only a fool worries over what he can't control.
+                                <span class="absolute -bottom-10 -right-6 text-6xl text-slate-700 opacity-50 font-serif">"</span>
+                            </p>
+                            <cite class="block text-base font-bold text-accent not-italic tracking-wide mt-4">— The Wise Man's Fear, Patrick Rothfuss</cite>
+                        </blockquote>
+                    </div>
+
+                    <div class="w-full flex-shrink-0 snap-center px-4 md:px-12">
+                        <blockquote class="text-xl md:text-3xl font-light text-gray-300 leading-relaxed text-center">
+                            <p class="mb-8 relative inline-block">
+                                <span class="absolute -top-4 -left-6 text-6xl text-slate-700 opacity-50 font-serif">"</span>
+                                To love the journey is to accept no such end. I have found, through painful
+                                experience, that the most important step a person can take is always the next one.
+                                <span class="absolute -bottom-10 -right-6 text-6xl text-slate-700 opacity-50 font-serif">"</span>
+                            </p>
+                            <cite class="block text-base font-bold text-accent not-italic tracking-wide mt-4">— Oathbringer, Brandon Sanderson</cite>
+                        </blockquote>
+                    </div>
+
+                </div>
+                
+                <p class="text-center text-gray-600 text-xs mt-8 uppercase tracking-widest">({ui.testimonials.swipe})</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>

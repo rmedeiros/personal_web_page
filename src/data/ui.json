@@ -1,0 +1,29 @@
+{
+  "en": {
+    "nav": { "home": "Home", "about": "About", "resume": "Resume", "work": "Works", "testimonials": "Testimonials" },
+    "hero": { "im": "I'm", "browse": "Browse my website to learn more", "about_link": "about me" },
+    "about": { "title": "About Me", "hi": "Hi! My name is", "consultant": "Technology Consultant", "phd": "Software Engineering PhD", "contact": "Contact Details", "download": "Download Resume", "printable": "Printable View" },
+    "resume": { "education": "Education", "work": "Work", "publications": "Publications", "skills": "Skills", "skills_intro": "Here are some of the skills I've developed over the years." },
+    "portfolio": { "title": "Check Out Some of My Works.", "details": "Details", "close": "Close" },
+    "testimonials": { "title": "Liked Quotes", "swipe": "Swipe to read more" },
+    "footer": { "design": "Original Design by", "renovated": "Renovated with Astro & Tailwind" }
+  },
+  "es": {
+    "nav": { "home": "Inicio", "about": "Sobre mí", "resume": "Experiencia", "work": "Proyectos", "testimonials": "Citas" },
+    "hero": { "im": "Soy", "browse": "Navega por mi web para saber más", "about_link": "sobre mí" },
+    "about": { "title": "Sobre Mí", "hi": "¡Hola! Me llamo", "consultant": "Consultor Tecnológico", "phd": "Doctor en Ingeniería de Software", "contact": "Datos de Contacto", "download": "Descargar CV", "printable": "Versión Imprimible" },
+    "resume": { "education": "Educación", "work": "Experiencia Laboral", "publications": "Publicaciones", "skills": "Habilidades", "skills_intro": "Estas son algunas de las habilidades que he desarrollado a lo largo de los años." },
+    "portfolio": { "title": "Echa un vistazo a mis trabajos.", "details": "Detalles", "close": "Cerrar" },
+    "testimonials": { "title": "Citas Favoritas", "swipe": "Desliza para leer más" },
+    "footer": { "design": "Diseño original de", "renovated": "Renovado con Astro y Tailwind" }
+  },
+  "eu": {
+    "nav": { "home": "Hasiera", "about": "Niri buruz", "resume": "Esperientzia", "work": "Lanak", "testimonials": "Aipamenak" },
+    "hero": { "im": "Ni", "browse": "Arakatu nire webgunea gehiago jakiteko", "about_link": "niri buruz" },
+    "about": { "title": "Niri Buruz", "hi": "Kaixo! Nire izena", "consultant": "Aholkulari Teknologikoa", "phd": "Software Ingeniaritzan Doktorea", "contact": "Harremanetarako Datuak", "download": "Deskargatu CV", "printable": "Inprimatzeko Bertsioa" },
+    "resume": { "education": "Hezkuntza", "work": "Lan Esperientzia", "publications": "Argitalpenak", "skills": "Gaitasunak", "skills_intro": "Hona hemen urteetan zehar garatu ditudan gaitasun batzuk." },
+    "portfolio": { "title": "Ikusi nire lan batzuk.", "details": "Xehetasunak", "close": "Itxi" },
+    "testimonials": { "title": "Gogoko Aipamenak", "swipe": "Pasatu gehiago irakurtzeko" },
+    "footer": { "design": "Jatorrizko diseinua:", "renovated": "Astro eta Tailwind-ekin berritua" }
+  }
+}

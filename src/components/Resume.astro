@@ -1,0 +1,98 @@
+---
+export interface Props {
+    resumeData: any;
+    ui: any;
+}
+
+const { resumeData, ui } = Astro.props;
+const { education, work, publications, skills } = resumeData;
+---
+
+<section id="resume" class="py-20 bg-secondary text-gray-300">
+    <div class="container mx-auto px-4">
+
+        <!-- Education -->
+        <div class="flex flex-col md:flex-row gap-8 mb-12 border-b border-gray-700 pb-12">
+            <div class="md:w-1/4">
+                <h2 class="text-xl font-bold uppercase border-b-2 border-accent inline-block text-gray-100 pb-1">{ui.resume.education}</h2>
+            </div>
+            <div class="md:w-3/4 space-y-8">
+                {education.map((edu: any) => (
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">{edu.institution}</h3>
+                        <p class="text-gray-400 text-lg mb-2">
+                            {edu.studyType} in {edu.area} <span class="mx-2 text-accent">&bull;</span> <em class="text-gray-500">{edu.endDate}</em>
+                        </p>
+                    </div>
+                ))}
+            </div>
+        </div>
+
+        <!-- Work -->
+        <div class="flex flex-col md:flex-row gap-8 mb-12 border-b border-gray-700 pb-12">
+            <div class="md:w-1/4">
+                 <h2 class="text-xl font-bold uppercase border-b-2 border-accent inline-block text-gray-100 pb-1">{ui.resume.work}</h2>
+            </div>
+            <div class="md:w-3/4 space-y-10">
+                {work.map((job: any) => (
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">{job.name}</h3>
+                        <p class="text-gray-400 text-lg mb-4">
+                            {job.position} <span class="mx-2 text-accent">&bull;</span> <em class="text-gray-500">{job.startDate} - {job.endDate}</em>
+                        </p>
+                        <p class="leading-relaxed text-justify text-gray-300">
+                            {job.summary}
+                        </p>
+                    </div>
+                ))}
+            </div>
+        </div>
+
+        <!-- Publications -->
+        <div class="flex flex-col md:flex-row gap-8 mb-12 border-b border-gray-700 pb-12">
+            <div class="md:w-1/4">
+                 <h2 class="text-xl font-bold uppercase border-b-2 border-accent inline-block text-gray-100 pb-1">{ui.resume.publications}</h2>
+            </div>
+            <div class="md:w-3/4 space-y-8">
+                {publications.map((pub: any) => (
+                    <div>
+                        <h3 class="text-xl font-bold text-white leading-tight mb-1">{pub.name}</h3>
+                        <p class="text-gray-400">
+                             {pub.authors.join(', ')} <span class="mx-2 text-accent">&bull;</span> {pub.publisher}
+                             <br/>
+                             <em class="text-gray-500">{pub.releaseDate}</em> <span class="mx-2 text-accent">&bull;</span> <a href={pub.website} target="_blank" class="text-accent hover:text-white transition-colors hover:underline">DOI</a>
+                        </p>
+                    </div>
+                ))}
+            </div>
+        </div>
+
+
+        <!-- Skills -->
+        <div class="flex flex-col md:flex-row gap-8">
+            <div class="md:w-1/4">
+                 <h2 class="text-xl font-bold uppercase border-b-2 border-accent inline-block text-gray-100 pb-1">{ui.resume.skills}</h2>
+            </div>
+            <div class="md:w-3/4">
+                <p class="mb-6 indent-2 text-gray-300">
+                    {ui.resume.skills_intro}
+                </p>
+                <ul class="space-y-4">
+                    {skills.map((skill: any) => (
+                        <li>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-bold text-gray-200">{skill.name}</span>
+                                <span class="text-sm text-gray-400">{skill.level}</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                <div class="bg-accent h-2.5 rounded-full shadow-[0_0_10px_rgba(6,182,212,0.5)]" 
+                                     style={`width: ${skill.level === 'Expert' ? '95%' : skill.level === 'Advanced' ? '80%' : '60%'}`}></div>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>

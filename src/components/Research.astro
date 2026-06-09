@@ -1,0 +1,45 @@
+---
+export interface Props {
+    ui: any;
+    publications: any[];
+}
+
+const { ui, publications } = Astro.props;
+---
+
+<section id="research" class="py-24 bg-secondary border-t border-gray-800">
+    <div class="container mx-auto px-6">
+        <div class="mb-16">
+            <h2 class="text-accent font-bold tracking-widest uppercase mb-4 text-sm">Research & Publications</h2>
+            <h3 class="text-3xl md:text-5xl font-bold text-white mb-6">Contributing to Science.</h3>
+        </div>
+
+        <div class="space-y-6">
+            {publications.map((pub: any, index: number) => (
+                <div class="group block p-8 bg-primary rounded-xl border border-gray-800 hover:border-accent/50 transition-all hover:bg-gray-900">
+                    <div class="flex flex-col md:flex-row gap-6 md:items-center justify-between">
+                        <div class="space-y-2 md:w-3/4">
+                            <h4 class="text-xl font-bold text-gray-200 group-hover:text-white transition-colors leading-tight">
+                                {pub.name}
+                            </h4>
+                            <p class="text-sm text-gray-500 font-mono">
+                                {pub.publisher} &bull; {pub.releaseDate}
+                            </p>
+                            <p class="text-gray-400 text-sm">
+                                {pub.authors.join(', ')}
+                            </p>
+                        </div>
+                        
+                        <div class="flex-shrink-0">
+                            <a href={pub.website} target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-accent hover:text-white transition-colors border border-accent/20 px-4 py-2 rounded-full hover:bg-accent/10">
+                                <span>Read Paper</span>
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+        
+    </div>
+</section>

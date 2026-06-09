@@ -1,0 +1,137 @@
+---
+export interface Props {
+    basics: any;
+    ui: any;
+    currentLang: string;
+}
+
+const { basics, ui, currentLang } = Astro.props;
+---
+
+<header id="home" class="relative h-screen min-h-[500px] flex items-center justify-center bg-gray-900 text-white overflow-hidden no-print">
+    <!-- Animated Gradient Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-primary via-slate-800 to-primary bg-[length:400%_400%] animate-gradient-xy opacity-90"></div>
+    
+    <!-- Mesh/Grid Pattern Overlay -->
+    <div class="absolute inset-0 bg-[url('/images/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20"></div>
+
+    <!-- Floating Particles/Blobs (CSS only) -->
+    <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
+    <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-highlight rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+    <div class="absolute -bottom-8 left-1/2 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-4000"></div>
+
+    <nav id="nav-wrap" class="fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-sm border-b border-white/5">
+        <ul class="flex justify-center flex-wrap items-center space-x-4 md:space-x-8 py-4 text-sm font-medium tracking-wide">
+            <li><a class="nav-link hover:text-accent transition-all duration-300 relative group" href="#home">
+                {ui.nav.home}
+                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span>
+            </a></li>
+            <li><a class="nav-link hover:text-accent transition-all duration-300 relative group" href="#about">
+                {ui.nav.about}
+                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span>
+            </a></li>
+            <li><a class="nav-link hover:text-accent transition-all duration-300 relative group" href="#resume">
+                {ui.nav.resume}
+                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span>
+            </a></li>
+            <li><a class="nav-link hover:text-accent transition-all duration-300 relative group" href="#portfolio">
+                {ui.nav.work}
+                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span>
+            </a></li>
+            <li><a class="nav-link hover:text-accent transition-all duration-300 relative group" href="#testimonials">
+                {ui.nav.testimonials}
+                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span>
+            </a></li>
+            
+            <!-- Language Switcher -->
+            <li class="border-l pl-6 border-white/20 flex space-x-3">
+                <a href="/en" class={`transition-colors font-bold ${currentLang === 'en' ? 'text-accent' : 'text-gray-400 hover:text-white'}`}>EN</a>
+                <a href="/es" class={`transition-colors font-bold ${currentLang === 'es' ? 'text-accent' : 'text-gray-400 hover:text-white'}`}>ES</a>
+                <a href="/eu" class={`transition-colors font-bold ${currentLang === 'eu' ? 'text-accent' : 'text-gray-400 hover:text-white'}`}>EU</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <h1 class="text-5xl md:text-8xl font-black mb-6 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400 drop-shadow-sm">
+            {ui.hero.im} <span class="text-white">{basics.name}</span>.
+        </h1>
+        <h3 class="text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-10 font-light">
+             {basics.summary}
+            <br/>
+            <span class="block mt-4 text-white/80">
+                {ui.hero.browse} <a class="text-accent hover:text-white transition-colors border-b border-accent hover:border-white pb-0.5" href="#about">{ui.hero.about_link}</a>.
+            </span>
+        </h3>
+        
+        <ul class="flex justify-center space-x-8 text-3xl">
+            {basics.profiles.map((profile: any) => (
+                <li>
+                    <a href={profile.url} target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 block" aria-label={profile.network}>
+                        <span class="sr-only">{profile.network}</span>
+                        <!-- You can replace with SVG icons later -->
+                        <i class={`fa fa-${profile.network.toLowerCase()} before:content-['']`}>{profile.network === 'LeedCode' ? 'Code' : profile.network}</i> 
+                    </a>
+                </li>
+            ))}
+        </ul>
+    </div>
+
+    <a href="#about" class="absolute bottom-10 animate-bounce p-2 rounded-full border border-white/10 bg-white/5 text-xl text-white hover:text-accent hover:bg-white/10 hover:border-accent/50 transition-all duration-300" aria-label="Scroll down">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+    </a>
+</header>
+
+<script>
+    // Navigation Background on Scroll
+    const nav = document.getElementById('nav-wrap');
+    if (nav) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-slate-900/90', 'shadow-lg');
+                nav.classList.remove('bg-transparent'); 
+            } else {
+                nav.classList.remove('bg-slate-900/90', 'shadow-lg');
+                nav.classList.add('bg-transparent');
+            }
+        });
+        // Initial check
+        if (window.scrollY <= 100) {
+             nav.classList.add('bg-transparent');
+             nav.classList.remove('bg-slate-900/90');
+        }
+    }
+
+    // Active Section Highlight
+    const sections = document.querySelectorAll('section, header');
+    const navLinks = document.querySelectorAll('#nav-wrap a');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.3 // 30% of section visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.classList.remove('text-accent'); // specific active color
+                    if (link.getAttribute('href') === `#${id}`) {
+                        link.classList.add('text-accent');
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
+
+<style>
+    /* Add specific background image logic if needed or ensure image exists */
+    /* If the original image was css/images/header-background.jpg, we need to find it */
+</style>
