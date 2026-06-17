@@ -1,0 +1,216 @@
+{
+  "basics": {
+    "name": "Raul Medeiros",
+    "label": "Technology Consultant & Software Engineering PhD",
+    "image": "/images/profile.jpg",
+    "email": "rmedeirosperez@gmail.com",
+    "summary": "PhD in Computer Science working as a Technology Consultant at LKS Next. Specialized in GenAI, Data Spaces, and Software Product Lines. Passionate about solving complex, real-world problems and exploring new technologies.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "ES",
+      "region": "Basque Country"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "RaulMedeirosP",
+        "url": "https://twitter.com/RaulMedeirosP"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "raul-medeiros-8328b2143",
+        "url": "https://www.linkedin.com/in/raul-medeiros-8328b2143/"
+      },
+      {
+        "network": "GitHub",
+        "username": "rmedeiros",
+        "url": "https://github.com/rmedeiros"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "LKS Nexts",
+      "position": "Technology Consultant",
+      "startDate": "2024-09",
+      "endDate": "Present",
+      "summary": "Involved in the development of GenAI projects aimed at automating repetitive, non-value-added tasks for clients. Part of the design and implementation of dataspaces to ensure secure and efficient data sharing across platforms. Actively participating in several R&D European projects."
+    },
+    {
+      "name": "University of the Basque Country (UPV/EHU) - Onekin Research Group",
+      "position": "Pre-doctoral Researcher",
+      "startDate": "2018-09",
+      "endDate": "2024-08",
+      "summary": "Development of PhD Thesis on Software Product Line Engineering (SPLE). Focused on SPL Onboarding, Visualization/Visual Analytics, and Continuous Deployment."
+    },
+    {
+      "name": "Indaba Consultores S.L.",
+      "position": "Developer",
+      "startDate": "2017-12",
+      "endDate": "2018-09",
+      "summary": "Migration of a legacy web platform into a microservice (REST) architecture. Frontend on Hippo CMS, backend on Spring Boot. Implemented SSO with Keycloak and used Jenkins for CI/CD."
+    },
+    {
+      "name": "AMPO S. Coop",
+      "position": "Software Engineer",
+      "startDate": "2017-05",
+      "endDate": "2017-09",
+      "summary": "Development of a database monitoring system using microservices (Spring Boot, Netflix Zuul). IT Management of two mobile applications, coordinating with providers and gathering requirements."
+    },
+    {
+      "name": "Gaia Net Exchange",
+      "position": "Junior Developer",
+      "startDate": "2016-10",
+      "endDate": "2017-01",
+      "summary": "Thin client development in C# for Gaia Net Exchange platform."
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of the Basque Country (UPV/EHU)",
+      "area": "Computer Science",
+      "studyType": "PhD",
+      "startDate": "2019-09",
+      "endDate": "2024-06"
+    },
+    {
+      "institution": "University of Murcia",
+      "area": "New Software Technologies",
+      "studyType": "Master",
+      "startDate": "2018-09",
+      "endDate": "2019-07"
+    },
+    {
+      "institution": "University of the Basque Country (UPV/EHU)",
+      "area": "Computer Science",
+      "studyType": "Bachelor",
+      "startDate": "2013-09",
+      "endDate": "2017-11"
+    }
+  ],
+  "publications": [
+    {
+      "name": "How can feature usage be tracked across product variants? Implicit Feedback in Software Product Lines",
+      "publisher": "Journal of Systems and Software",
+      "releaseDate": "2024-05",
+      "website": "https://doi.org/10.1016/j.jss.2024.112013",
+      "authors": ["Oscar Díaz", "Raul Medeiros", "Mustafa Al-Hajjaji"]
+    },
+    {
+      "name": "FEACKER: Platform-based implicit feedback in annotation-based variant management tools",
+      "publisher": "Software Impacts",
+      "releaseDate": "2024-07",
+      "website": "https://doi.org/10.1016/j.simpa.2024.100688",
+      "authors": ["Raul Medeiros", "Oscar Díaz", "Xabier Garmendia"]
+    },
+    {
+      "name": "Unleashing the Power of Implicit Feedback in Software Product Lines: Benefits Ahead",
+      "publisher": "GPCE 2023",
+      "releaseDate": "2024-07",
+      "website": "https://doi.org/10.1145/3624007.3624058",
+      "authors": ["Raul Medeiros", "Oscar Díaz", "David Benavides"]
+    },
+    {
+      "name": "Visualizations for the evolution of Variant-Rich Systems: A systematic mapping study",
+      "publisher": "Information and Software Technology",
+      "releaseDate": "2022-10",
+      "website": "https://doi.org/10.1016/j.infsof.2022.107084",
+      "authors": ["Raul Medeiros", "Jabier Martinez", "Oscar Díaz", "Jean-Remy Falleri"]
+    },
+    {
+      "name": "Assisting Mentors in Selecting Newcomers’ Next Task in Software Product Lines: A Recommender System Approach",
+      "publisher": "CAiSE",
+      "releaseDate": "2022-06",
+      "website": "https://doi.org/10.1007/978-3-031-07472-1_27",
+      "authors": ["Raul Medeiros", "Oscar Díaz"]
+    },
+    {
+      "name": "Visualizing the customization endeavor in product-based-evolving software product lines: a case of action design research",
+      "publisher": "Empirical Software Engineering",
+      "releaseDate": "2022-05",
+      "website": "https://doi.org/10.1016/j.infsof.2022.107084",
+      "authors": ["Oscar Díaz", "Leticia Montalvillo", "Raul Medeiros", "Maider Azanza", "Thomas Fogdal"]
+    },
+    {
+      "name": "Unburdening onboarding in software product lines",
+      "publisher": "ICSE Companion - Doctoral Symposium",
+      "releaseDate": "2021-05",
+      "website": "https://doi.org/10.1109/ICSE-Companion52605.2021.00121",
+      "authors": ["Raul Medeiros"]
+    },
+    {
+      "name": "Onboarding in software product lines: Concept maps as welcome guides",
+      "publisher": "ICSE-SEET",
+      "releaseDate": "2021-05",
+      "website": "https://doi.org/10.1109/ICSE-SEET52601.2021.00022",
+      "authors": ["Maider Azanza", "Arantza Irastorza", "Raul Medeiros", "Oscar Díaz"]
+    },
+    {
+      "name": "Change Analysis of #if-def Blocks with FeatureCloud",
+      "publisher": "SPLC",
+      "releaseDate": "2019-09",
+      "website": "https://doi.org/10.1145/3307630.3342386",
+      "authors": ["Oscar Díaz", "Raul Medeiros", "Leticia Montalvillo"]
+    }
+  ],
+  "skills": [
+    {
+      "name": "GenAI",
+      "level": "Expert"
+    },
+    {
+      "name": "R&D",
+      "level": "Expert"
+    },
+    {
+      "name": "Python",
+      "level": "Advanced"
+    },
+    {
+      "name": "Langchain",
+      "level": "Advanced"
+    },
+    {
+      "name": "Dataspaces",
+      "level": "Intermediate"
+    },
+    {
+      "name": "Software Product Lines",
+      "level": "Expert"
+    },
+    {
+      "name": "Java",
+      "level": "Advanced"
+    },
+    {
+      "name": "Planning & Management",
+      "level": "Intermediate"
+    },
+    {
+      "name": "Agile Development",
+      "level": "Advanced"
+    },
+    {
+      "name": "DevOps",
+      "level": "Intermediate"
+    }
+  ],
+  "projects": [
+    {
+      "name": "CustomDIFF",
+      "description": "CustomDIFF is a web-based Visual Analytics tool for Software Product Lines Customization Analysis. CustomDIFF uses pure::variants and Git as the variability manager and code repository, respectively.",
+      "keywords": ["SPL", "Visualization", "Spring Boot"],
+      "url": "https://github.com/onekin/CustomDiff",
+      "image": "/images/portfolio/customdiff.ico"
+    },
+    {
+      "name": "FeatureCloud",
+      "description": "FeatureCloud is a tag based visualization tool used to improve comprehensibility and maintenance of preprocessor-based SPL code.",
+      "keywords": ["SPL", "Visualization", "Spring Boot"],
+      "url": "https://github.com/rmedeiros/FeatureCloud",
+      "image": "/images/portfolio/featurecloud.ico"
+    }
+  ]
+}

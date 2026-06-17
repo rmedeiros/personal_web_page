@@ -1,0 +1,74 @@
+---
+export interface Props {
+    projects: any[];
+    ui: any;
+}
+
+const { projects, ui } = Astro.props;
+---
+
+<section id="portfolio" class="py-20 bg-primary">
+    <div class="container mx-auto px-4">
+
+        <h2 class="text-xl font-bold uppercase tracking-widest text-center mb-12 text-gray-400">{ui.portfolio.title}</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {projects.map((project: any, index: number) => (
+                <div class="group relative cursor-pointer overflow-hidden rounded shadow-sm hover:shadow-cyan-500/20 hover:shadow-lg transition-all duration-300 bg-secondary border border-gray-700 hover:border-accent/50" 
+                     onclick={`document.getElementById('modal-${index}').showModal()`}>
+                    
+                    <div class="aspect-w-1 aspect-h-1 flex items-center justify-center bg-white/5 p-4 h-64 transition-colors">
+                         <img src={project.image} alt={project.name} class="object-contain max-h-full max-w-full group-hover:scale-105 transition-transform duration-300 drop-shadow-lg" />
+                    </div>
+                    
+                    <div class="absolute inset-0 bg-secondary/95 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white py-4 px-2 text-center backdrop-blur-sm border-t border-accent">
+                        <h5 class="text-xl font-bold mb-1 text-accent">{project.name}</h5>
+                        <p class="text-sm text-gray-300">{project.keywords.join(', ')}</p>
+                    </div>
+
+                </div>
+            ))}
+        </div>
+
+        {/* Modals using HTML <dialog> */}
+        {projects.map((project: any, index: number) => (
+            <dialog id={`modal-${index}`} class="p-0 rounded-lg shadow-2xl backdrop:bg-black/90 max-w-2xl w-full m-auto bg-transparent text-gray-300 border border-gray-700">
+                <div class="bg-secondary rounded-lg overflow-hidden">
+                    <div class="relative bg-slate-700/50 h-64 flex items-center justify-center p-8 bg-[url('/images/grid.svg')]">
+                         <img src={project.image} alt={project.name} class="max-h-full object-contain filter drop-shadow-2xl" />
+                         <button onclick={`document.getElementById('modal-${index}').close()`} class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors text-3xl leading-none">&times;</button>
+                    </div>
+                    
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-white mb-2">{project.name}</h3>
+                        <p class="text-gray-300 mb-6 leading-relaxed">{project.description}</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            {project.keywords.map((keyword: any) => (
+                                <span class="bg-gray-700 text-accent px-3 py-1 rounded-full text-sm font-medium border border-gray-600">{keyword}</span>
+                            ))}
+                        </div>
+                        
+                        <div class="flex justify-end space-x-4">
+                            <a href={project.url} target="_blank" class="px-6 py-2 bg-accent hover:bg-accent-hover text-primary font-bold rounded shadow-lg shadow-cyan-500/30 transition-all hover:-translate-y-0.5">{ui.portfolio.details}</a>
+                            <button onclick={`document.getElementById('modal-${index}').close()`} class="px-6 py-2 border border-gray-600 hover:bg-gray-700 text-gray-300 rounded font-medium transition-colors hover:text-white">{ui.portfolio.close}</button>
+                        </div>
+                    </div>
+                </div>
+            </dialog>
+        ))}
+    </div>
+</section>
+
+<style>
+    dialog::backdrop {
+        background: rgba(0, 0, 0, 0.8);
+    }
+    dialog[open] {
+        animation: fade-in 0.3s ease-out;
+    }
+    @keyframes fade-in {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opacity: 1; transform: scale(1); }
+    }
+</style>

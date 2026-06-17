@@ -1,0 +1,39 @@
+---
+export interface Props {
+    basics: any;
+    ui: any;
+}
+
+const { basics, ui } = Astro.props;
+---
+
+<footer class="py-12 bg-black text-gray-400 text-center relative">
+    <div class="absolute inset-0 bg-gradient-to-t from-black to-primary opacity-50 pointer-events-none"></div>
+    <div class="container mx-auto px-4 relative z-10">
+        
+        <ul class="flex justify-center space-x-8 mb-8 text-2xl">
+              {basics.profiles.map((profile: any) => (
+                <li>
+                    <a href={profile.url} target="_blank" class="hover:text-accent transition-all hover:scale-110 transform inline-block">
+                        <span class="sr-only">{profile.network}</span>
+                        <!-- Replace with proper icons -->
+                        <span class="font-bold">{profile.network === 'LeedCode' ? 'Code' : profile.network}</span>
+                    </a>
+                </li>
+            ))}
+        </ul>
+
+        <ul class="space-y-2 text-sm text-gray-500">
+            <li class="hover:text-gray-300 transition-colors">&copy; Copyright {new Date().getFullYear()} {basics.name}</li>
+            <li>{ui.footer.design} <a href="http://www.styleshout.com/" title="Styleshout" target="_blank" class="hover:text-accent underline decoration-dotted">Styleshout</a></li>
+            <li>{ui.footer.renovated}</li>
+        </ul>
+
+        <div id="go-top" class="mt-8">
+            <a class="smoothscroll inline-block p-3 bg-secondary hover:bg-accent hover:text-primary transition-all duration-300 rounded-full shadow-lg" title="Back to Top" href="#home">
+                ▲
+            </a>
+        </div>
+
+    </div>
+</footer>

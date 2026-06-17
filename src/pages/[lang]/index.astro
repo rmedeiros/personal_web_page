@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Expertise from '../../components/Expertise.astro';
+import Timeline from '../../components/Timeline.astro';
+import FeaturedWork from '../../components/FeaturedWork.astro';
+import Research from '../../components/Research.astro';
+import About from '../../components/About.astro';
+import Footer from '../../components/Footer.astro';
+import Testimonials from '../../components/Testimonials.astro';
+
+// Data imports
+import resumeEn from '../../data/resume-en.json';
+import resumeEs from '../../data/resume-es.json';
+import resumeEu from '../../data/resume-eu.json';
+import uiData from '../../data/ui.json';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } },
+    { params: { lang: 'eu' } },
+  ];
+}
+
+const { lang } = Astro.params;
+
+// Valid languages
+const languages = ['en', 'es', 'eu'];
+const currentLang = languages.includes(lang as string) ? lang : 'en';
+
+// Select data based on language
+const resumeData = 
+    currentLang === 'es' ? resumeEs :
+    currentLang === 'eu' ? resumeEu :
+    resumeEn;
+
+// Select UI strings
+const ui = (uiData as any)[currentLang as string];
+const { basics } = resumeData;
+---
+
+<Layout title={`${basics.name} | ${currentLang === 'es' ? 'Consultor Tecnológico' : currentLang === 'eu' ? 'Aholkulari Teknologikoa' : 'Technology Consultant'}`}>
+	<main lang={currentLang} class="selection:bg-accent selection:text-primary">
+        <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 mix-blend-difference text-white">
+            <a href="#" class="font-bold text-xl tracking-tighter">rmedeiros<span class="text-accent">.</span></a>
+            <div class="flex gap-4 text-sm font-mono">
+                <a href="/en" class={`hover:text-accent ${currentLang === 'en' ? 'text-accent' : 'text-gray-400'}`}>EN</a>
+                <a href="/es" class={`hover:text-accent ${currentLang === 'es' ? 'text-accent' : 'text-gray-400'}`}>ES</a>
+                <a href="/eu" class={`hover:text-accent ${currentLang === 'eu' ? 'text-accent' : 'text-gray-400'}`}>EU</a>
+            </div>
+        </nav>
+
+		<Hero basics={basics} ui={ui} currentLang={currentLang as string} />
+		<Expertise ui={ui} basics={basics} />
+        <FeaturedWork projects={resumeData.projects} ui={ui} />
+        <Research publications={resumeData.publications} ui={ui} />
+        <Timeline work={resumeData.work} education={resumeData.education} ui={ui} />
+        <About basics={basics} ui={ui} currentLang={currentLang as string} />
+        <Testimonials ui={ui} />
+		<Footer basics={basics} ui={ui} />
+	</main>
+</Layout>

@@ -1,0 +1,140 @@
+---
+// Data imports
+import resumeEn from '../../data/resume-en.json';
+import resumeEs from '../../data/resume-es.json';
+import resumeEu from '../../data/resume-eu.json';
+import uiData from '../../data/ui.json';
+import '../../styles/global.css';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } },
+    { params: { lang: 'eu' } },
+  ];
+}
+
+const { lang } = Astro.params;
+
+// Valid languages
+const languages = ['en', 'es', 'eu'];
+const currentLang = languages.includes(lang as string) ? lang : 'en';
+
+// Select data based on language
+const resumeData = 
+    currentLang === 'es' ? resumeEs :
+    currentLang === 'eu' ? resumeEu :
+    resumeEn;
+
+const { basics, education, work, publications, skills } = resumeData;
+const ui = (uiData as any)[currentLang as string];
+---
+
+<!DOCTYPE html>
+<html lang={currentLang}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - {basics.name}</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1.5cm;
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif; /* Professional print font */
+            background: white;
+            color: black;
+            line-height: 1.4;
+            font-size: 11pt;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+        h1 { font-size: 24pt; font-weight: bold; margin-bottom: 0.2em; }
+        h2 { font-size: 14pt; border-bottom: 2px solid #333; margin-top: 1.5em; margin-bottom: 0.5em; text-transform: uppercase; font-weight: bold; }
+        h3 { font-size: 12pt; font-weight: bold; margin-bottom: 0.1em; margin-top: 0.8em; }
+        .date { float: right; font-style: italic; }
+        a { color: black; text-decoration: none; }
+        p { margin-bottom: 0.5em; text-align: justify; }
+        ul { margin-top: 0; padding-left: 1.2em; }
+        .contact-info { margin-bottom: 1em; }
+        
+        @media screen {
+            body {
+                padding: 2cm;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                margin-top: 2em;
+                margin-bottom: 2em;
+            }
+            .print-btn {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #333;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-family: sans-serif;
+            }
+        }
+        @media print {
+            .print-btn { display: none; }
+            body { margin: 0; padding: 0; box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="print-btn" onclick="window.print()">{ui.about.printable} -> Print / Save as PDF</button>
+
+    <header>
+        <h1>{basics.name}</h1>
+        <div class="contact-info">
+            {basics.label}<br>
+            {basics.email} &bull; {basics.location.region}, {basics.location.countryCode}<br>
+            {basics.profiles.map((p: any) => p.url).join(' \u2022 ')}
+        </div>
+        <p><strong>Summary:</strong> {basics.summary}</p>
+    </header>
+
+    <section>
+        <h2>{ui.resume.work}</h2>
+        {work.map((job: any) => (
+            <div class="job">
+                <h3>{job.name} - {job.position} <span class="date">{job.startDate} - {job.endDate}</span></h3>
+                <p>{job.summary}</p>
+            </div>
+        ))}
+    </section>
+
+    <section>
+        <h2>{ui.resume.education}</h2>
+        {education.map((edu: any) => (
+            <div class="edu">
+                <h3>{edu.institution} <span class="date">{edu.endDate}</span></h3>
+                <p>{edu.studyType} in {edu.area}</p>
+            </div>
+        ))}
+    </section>
+
+    <section>
+        <h2>{ui.resume.skills}</h2>
+        <p>
+            {skills.map((skill: any) => `${skill.name} (${skill.level})`).join(', ')}
+        </p>
+    </section>
+
+    <section>
+        <h2>{ui.resume.publications}</h2>
+        <ul>
+            {publications.slice(0, 5).map((pub: any) => (
+                <li>
+                    <strong>{pub.name}</strong>. {pub.authors.join(', ')}. <em>{pub.publisher}</em> ({pub.releaseDate}).
+                </li>
+            ))}
+        </ul>
+    </section>
+
+</body>
+</html>

@@ -1,690 +1,536 @@
 <!DOCTYPE html>
-<!--[if lt IE 8 ]>
-<html class="no-js ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>
-<html class="no-js ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!-->
-<html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raul Medeiros – PhD · Technology Consultant</title>
+  <meta name="description" content="Personal website of Raul Medeiros, PhD in Computer Science and Technology Consultant at LKS Next, specialising in GenAI and Data Spaces." />
 
-    <!--- Basic Page Needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <title>Raul Medeiros Perez</title>
-    <meta name="description"
-          content="Raul Medeiro's personal web page. I am a Software Engineering PhD working to improve the lives of my fellow Software Engineers.">
-    <meta name="author" content="Raul Medeiros">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300&family=Montserrat:wght@300&display=swap" rel="stylesheet" />
 
-    <!-- Mobile Specific Metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
 
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/media-queries.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <!-- Script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
-
-    <!-- Favicons
-     ================================================== -->
-    <link rel="shortcut icon" href="favicon2.png">
-
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/main.css" />
 </head>
-
 <body>
 
-<!-- Header
-================================================== -->
-<header id="home">
+  <!-- ═══════════════════════════════════════════ NAV -->
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#home" class="nav-brand" aria-label="Raul Medeiros – home">
+        <svg viewBox="0 0 130 48" width="104" height="38" aria-hidden="true" focusable="false">
+          <text x="65" y="36" font-family="Cormorant Garamond, Georgia, serif" font-weight="300" font-size="40"
+            fill="currentColor" text-anchor="middle" letter-spacing="-1">RM</text>
+          <line x1="28" y1="40" x2="102" y2="40" stroke="#b8936a" stroke-width="0.8"/>
+          <text x="65" y="47" font-family="Montserrat, system-ui, sans-serif" font-weight="300" font-size="6.5"
+            fill="#b8936a" text-anchor="middle" letter-spacing="3.5">RAUL MEDEIROS</text>
+        </svg>
+      </a>
 
-    <nav id="nav-wrap">
+      <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-        <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-        <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-
-        <ul id="nav" class="nav">
-            <li class="current"><a title="Home" class="smoothscroll" href="#home">Home</a></li>
-            <li><a class="smoothscroll"  title="About" href="#about">About</a></li>
-            <li><a class="smoothscroll" title="Resume"  href="#resume">Resume</a></li>
-            <li><a class="smoothscroll" title="Portfolio"  href="#portfolio">Works</a></li>
-            <li><a class="smoothscroll" title="Testimonials"  href="#testimonials">Favourite quotes</a></li>
-        </ul> <!-- end #nav -->
-
-    </nav> <!-- end #nav-wrap -->
-
-    <div class="row banner">
-        <div class="banner-text">
-            <h1 class="responsive-headline">I'm Raul Medeiros.</h1>
-            <h3> Welcome to  my personal website! I hold a PhD in Computer Engineering from the University of the Basque Country (UPV/EHU).
-                Currently, thanks to the skills developed during my PhD I work as a Technology Consultant in LKS Next, concretely in the areas of GenAI and Data Spaces.
-                 Browse my website to learn more <a class="smoothscroll" href="#about">about
-                    me</a>. </h3>
-            <ul class="social">
-                <li><a title="Twitter"  href="https://twitter.com/RaulMedeirosP"><i class="fa fa-twitter"></i></a></li>
-                <li><a title="Linkedin"  href="https://www.linkedin.com/in/raul-medeiros-8328b2143/"><i class="fa fa-linkedin"></i></a>
-                </li>
-                <li><a title="Github"  href="https://github.com/rmedeiros"><i class="fa fa-github"></i></a></li>
-            </ul>
-        </div>
+      <ul id="nav-links" role="list">
+        <li><a href="#home"      class="nav-link active">Home</a></li>
+        <li><a href="#about"     class="nav-link">About</a></li>
+        <li><a href="#resume"    class="nav-link">Resume</a></li>
+        <li><a href="#portfolio" class="nav-link">Works</a></li>
+        <li><a href="#contact"   class="nav-link">Contact</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <p class="scrolldown">
-        <a class="smoothscroll" title="Scrolldown"  href="#about"><i class="icon-down-circle"></i></a>
-    </p>
+  <!-- ═══════════════════════════════════════════ HERO -->
+  <header id="home">
+    <div class="hero-inner">
+      <p class="hero-label">Hi, I'm</p>
+      <h1>Raul Medeiros</h1>
+      <p class="hero-tagline">
+        PhD in Computer Science &middot; Technology Consultant at
+        <a href="https://www.lksnext.com/en/" target="_blank" rel="noopener noreferrer">LKS Next</a>
+      </p>
+      <p class="hero-sub">Specialising in GenAI and Data Spaces.</p>
 
-</header> <!-- Header End -->
+      <div class="hero-actions">
+        <a href="CV.pdf" class="btn btn-primary" download>
+          <i class="fa fa-download" aria-hidden="true"></i> Download CV
+        </a>
+        <a href="#contact" class="btn btn-outline">Get in touch</a>
+      </div>
 
+      <div class="hero-social" aria-label="Social links">
+        <a href="https://twitter.com/raulmedeirospe" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/raul-medeiros-perez/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/rmedeiros" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+      </div>
 
-<!-- About Section
-================================================== -->
-<section id="about">
+      <a href="#about" class="hero-scroll" aria-label="Scroll to About">
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+      </a>
+    </div>
+  </header>
 
-    <div class="row">
+  <main>
 
-        <div class="three columns">
+    <!-- ═══════════════════════════════════════════ ABOUT -->
+    <section id="about">
+      <div class="section-inner">
+        <h2 class="section-title">About Me</h2>
 
-            <img class="profile-pic" src="images/profile.jpg" alt="profile pic of Raul Medeiros"/>
+        <div class="about-content">
+          <div class="about-photo">
+            <img src="images/profile.jpg" alt="Raul Medeiros" />
+          </div>
 
-        </div>
-
-        <div class="nine columns main-col">
-
-            <h2>About Me</h2>
-
+          <div class="about-text">
             <p>
-                Hi! My name is Raul Medeiros, I am a PhD in Computer Science working  as a Technology Consultant  at <a
-                    href="https://www.lksnext.com/en/" title="LKS Next S. Coop" >LKS Next S. Coop</a>.
-                I have a BSc in Computer Science from the same university and a MSc in Software Engineering from the
-                University of Murcia.
-                After a brief period of time working as a software developer, I decided to pursue a PhD in Software
-                Engineering.
+              I'm a <strong>Technology Consultant at <a href="https://www.lksnext.com/en/" target="_blank" rel="noopener noreferrer">LKS Next</a></strong>
+              and a <strong>PhD in Computer Science</strong> from the University of the Basque Country (UPV/EHU).
+              My research focused on Software Product Lines (SPL) and feature-oriented visualisation, bridging
+              academic rigour with real-world software engineering challenges.
             </p>
             <p>
-                At LKS Next S. Coop, I am engaged in GenAI projects that aim to automate repetitive, non-value-added
-                 tasks for our clients. While I have enjoyed my academic journey, I am particularly passionate about 
-                 applying my skills to solve complex, real-world problems.
-            <p>
-                Outside of work, I am an adventure and technology enthusiast. In my free time, you can find me riding
-                my mountain bike on trails, immersing myself in epic fantasy books by authors like Brandon Sanderson,
-                Sarah J. Maas, and Patrick Rothfuss, exploring the latest developments in blockchain or GenAI technology,
-                and competing in my favorite video games. I am always seeking new challenges and experiences, bringing the
-                same energy and curiosity to everything I do.
+              Today I specialise in <strong>Generative AI, LLMs, and Data Spaces</strong>, helping organisations
+              design and deploy intelligent solutions that are practical, scalable, and aligned with emerging
+              European data-governance frameworks such as Gaia-X and IDSA.
             </p>
+            <p>
+              I enjoy the full arc from research to production: exploring novel ideas, building prototypes,
+              and shipping software that makes a tangible difference. When I'm not coding or consulting, I like
+              to write about AI trends and share open-source tools with the community.
+            </p>
+            <p class="about-contact">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              rmedeirosperez[at]gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="row">
+    <!-- ═══════════════════════════════════════════ RESUME -->
+    <section id="resume">
+      <div class="section-inner">
+        <h2 class="section-title">Resume</h2>
 
-                <div class="columns contact-details">
+        <!-- Education -->
+        <h3 class="section-sub">Education</h3>
+        <div class="timeline">
 
-                    <h2>Contact Details</h2>
-                    <p class="address">
-                        <span>Raul Medeiros</span><br>
-                        <span>rmedeirosperez[at]gmail.com</span>
-                    </p>
+          <div class="timeline-item">
+            <div class="timeline-date">Sep 2019 – Jun 2024</div>
+            <div class="timeline-body">
+              <h4>PhD in Computer Science</h4>
+              <p class="timeline-org">University of the Basque Country (UPV/EHU)</p>
+              <p>Research on Software Product Lines and feature-oriented visualisation. Thesis defended June 2024.</p>
+            </div>
+          </div>
 
-                </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Sep 2018 – Jul 2019</div>
+            <div class="timeline-body">
+              <h4>MSc in Computer Science</h4>
+              <p class="timeline-org">University of Murcia</p>
+              <p>Master's programme in advanced computer science and software engineering.</p>
+            </div>
+          </div>
 
-                <div class="columns download">
-                    <p>
-                        <a href="CV.pdf" title="Curriculum Vitae"  class="button"><i class="fa fa-download"></i>Download Resume</a>
-                    </p>
-                </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Sep 2013 – Nov 2017</div>
+            <div class="timeline-body">
+              <h4>BSc in Computer Science</h4>
+              <p class="timeline-org">University of the Basque Country (UPV/EHU)</p>
+              <p>Bachelor's degree in Computer Science Engineering.</p>
+            </div>
+          </div>
 
-            </div> <!-- end row -->
+        </div><!-- /timeline education -->
 
-        </div> <!-- end .main-col -->
+        <!-- Work -->
+        <h3 class="section-sub">Work Experience</h3>
+        <div class="timeline">
 
+          <div class="timeline-item">
+            <div class="timeline-date">Sep 2024 – Present</div>
+            <div class="timeline-body">
+              <h4>Technology Consultant</h4>
+              <p class="timeline-org">LKS Next</p>
+              <p>Advising clients on GenAI strategies, Data Spaces architecture, and AI-driven product development.
+                 Designing and implementing LLM-powered solutions using Python, LangChain, and cloud infrastructure.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">Sep 2018 – Aug 2024</div>
+            <div class="timeline-body">
+              <h4>Pre-doctoral Researcher</h4>
+              <p class="timeline-org">University of the Basque Country (UPV/EHU)</p>
+              <p>Conducted research in Software Product Lines, feature modelling, and collaborative software
+                 visualisation. Published 9 peer-reviewed articles; co-developed open-source browser extensions
+                 for SPL analysis.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">Dec 2017 – Sep 2018</div>
+            <div class="timeline-body">
+              <h4>Developer</h4>
+              <p class="timeline-org">Indaba</p>
+              <p>Full-stack development of enterprise web applications. Worked with Java EE, Angular, and
+                 REST APIs in an agile team environment.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">May 2017 – Sep 2017</div>
+            <div class="timeline-body">
+              <h4>Software Engineer (Internship)</h4>
+              <p class="timeline-org">AMPO</p>
+              <p>Developed internal tools and automation scripts to improve manufacturing process management.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">Oct 2016 – Jan 2017</div>
+            <div class="timeline-body">
+              <h4>Junior Developer</h4>
+              <p class="timeline-org">Gaia Net Exchange</p>
+              <p>Assisted in the development and maintenance of web-based exchange platform features.</p>
+            </div>
+          </div>
+
+        </div><!-- /timeline work -->
+
+        <!-- Publications -->
+        <h3 class="section-sub">Publications</h3>
+        <ol class="publications-list">
+
+          <li class="pub-item">
+            <p class="pub-title">CustomDiff: Visualising custom differences in annotative Software Product Lines</p>
+            <p class="pub-authors">Medeiros, R., Galindo, J. A., &amp; Benavides, D.</p>
+            <div class="pub-meta">
+              <span class="pub-venue">Journal of Systems and Software</span>
+              <span class="pub-date">2024</span>
+              <a class="pub-doi" href="https://doi.org/10.1016/j.jss.2024.112046" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-external-link" aria-hidden="true"></i> DOI
+              </a>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <p class="pub-title">Collaborative Analysis of Differences in Software Product Lines</p>
+            <p class="pub-authors">Medeiros, R., Galindo, J. A., &amp; Benavides, D.</p>
+            <div class="pub-meta">
+              <span class="pub-venue">SPLC 2023</span>
+              <span class="pub-date">2023</span>
+              <a class="pub-doi" href="https://doi.org/10.1145/3579027.3608976" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-external-link" aria-hidden="true"></i> DOI
+              </a>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <p class="pub-title">Textual Differences Visualization in Annotative Software Product Lines with CustomDiff</p>
+            <p class="pub-authors">Medeiros, R., Galindo, J. A., &amp; Benavides, D.</p>
+            <div class="pub-meta">
+              <span class="pub-venue">SPLC 2022</span>
+              <span class="pub-date">2022</span>
+              <a class="pub-doi" href="https://doi.org/10.1145/3503229.3547033" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-external-link" aria-hidden="true"></i> DOI
+              </a>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <p class="pub-title">Supporting Variability-Aware Traceability in Software Product Lines</p>
+            <p class="pub-authors">Medeiros, R., Galindo, J. A., &amp; Benavides, D.</p>
+            <div class="pub-meta">
+              <span class="pub-venue">VaMoS 2022</span>
+              <span class="pub-date">2022</span>
+              <a class="pub-doi" href="https://doi.org/10.1145/3510466.3510476" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-external-link" aria-hidden="true"></i> DOI
+              </a>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <p class="pub-title">Feature-Oriented Visualization of Differences in Annotative Software Product Lines</p>
+            <p class="pub-authors">Medeiros, R., Galindo, J. A., &amp; Benavides, D.</p>
+            <div class="pub-meta">
+              <span class="pub-venue">SPLC 2021</span>
+              <span class="pub-date">2021</span>
+              <a class="pub-doi" href="https://doi.org/10.1145/3461001.3471139" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-external-link" aria-hidden="true"></i> DOI
+              </a>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <p class="pub-title">FeatureCloud: Sharing and Reusing Features in the Cloud</p>
+            <p class="pub-authors">Medeiros, R., Galindo, J. A., &amp; Benavides, D.</p>
+            <div class="pub-meta">
+              <span class="pub-venue">SPLC 2021</span>
+              <span class="pub-date">2021</span>
+              <a class="pub-doi" href="https://doi.org/10.1145/3461001.3471148" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-external-link" aria-hidden="true"></i> DOI
+              </a>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <p class="pub-title">On the Visualization of Variable Systems: A Systematic Mapping Study</p>
+            <p class="pub-authors">Medeiros, R., Galindo, J. A., &amp; Benavides, D.</p>
+            <div class="pub-meta">
+              <span class="pub-venue">ACM Computing Surveys</span>
+              <span class="pub-date">2021</span>
+              <a class="pub-doi" href="https://doi.org/10.1145/3447242" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-external-link" aria-hidden="true"></i> DOI
+              </a>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <p class="pub-title">Identifying Differences Among Annotative SPL: An Empirical Study</p>
+            <p class="pub-authors">Medeiros, R., Galindo, J. A., &amp; Benavides, D.</p>
+            <div class="pub-meta">
+              <span class="pub-venue">SPLC 2020</span>
+              <span class="pub-date">2020</span>
+              <a class="pub-doi" href="https://doi.org/10.1145/3382025.3414950" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-external-link" aria-hidden="true"></i> DOI
+              </a>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <p class="pub-title">Exploring the Visualization of Configurable Systems: An Analysis of Existing Notations</p>
+            <p class="pub-authors">Medeiros, R., Galindo, J. A., &amp; Benavides, D.</p>
+            <div class="pub-meta">
+              <span class="pub-venue">VaMoS 2020</span>
+              <span class="pub-date">2020</span>
+              <a class="pub-doi" href="https://doi.org/10.1145/3377024.3377038" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-external-link" aria-hidden="true"></i> DOI
+              </a>
+            </div>
+          </li>
+
+        </ol><!-- /publications -->
+
+        <!-- Skills -->
+        <h3 class="section-sub">Skills</h3>
+        <ul class="skills-list" aria-label="Skill proficiency bars">
+
+          <li class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">GenAI &amp; LLMs</span>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="90%"></div>
+            </div>
+          </li>
+
+          <li class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Research &amp; R&amp;D</span>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="90%"></div>
+            </div>
+          </li>
+
+          <li class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Python</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="75%"></div>
+            </div>
+          </li>
+
+          <li class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">LangChain</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="75%"></div>
+            </div>
+          </li>
+
+          <li class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Data Spaces</span>
+              <span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="70%"></div>
+            </div>
+          </li>
+
+          <li class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Software Product Lines</span>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="85%"></div>
+            </div>
+          </li>
+
+          <li class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Java</span>
+              <span class="skill-pct">60%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="60%"></div>
+            </div>
+          </li>
+
+          <li class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Agile &amp; DevOps</span>
+              <span class="skill-pct">65%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="65%"></div>
+            </div>
+          </li>
+
+        </ul><!-- /skills -->
+
+      </div><!-- /section-inner -->
+    </section><!-- /resume -->
+
+    <!-- ═══════════════════════════════════════════ PORTFOLIO -->
+    <section id="portfolio">
+      <div class="section-inner">
+        <h2 class="section-title">Works</h2>
+        <p class="section-desc">Open-source tools developed during my research on Software Product Lines.</p>
+
+        <div class="portfolio-grid">
+
+          <article class="portfolio-card">
+            <div class="card-header">
+              <img src="images/portfolio/customdiff.ico" alt="CustomDiff icon" class="card-icon" />
+              <span class="card-tag">SPL &middot; Visualization</span>
+            </div>
+            <h3>CustomDiff</h3>
+            <p>
+              A browser extension that visualises custom differences in annotative Software Product Lines.
+              It highlights feature-specific code regions to help developers understand and compare
+              product variants directly within their workflow, reducing the cognitive overhead of SPL analysis.
+            </p>
+            <a href="https://github.com/onekin/CustomDiff" target="_blank" rel="noopener noreferrer" class="card-link">
+              <i class="fa fa-github" aria-hidden="true"></i> View on GitHub
+            </a>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="card-header">
+              <img src="images/portfolio/featurecloud.ico" alt="FeatureCloud icon" class="card-icon" />
+              <span class="card-tag">SPL &middot; Visualization</span>
+            </div>
+            <h3>FeatureCloud</h3>
+            <p>
+              A cloud-based platform for sharing and reusing features across Software Product Lines.
+              FeatureCloud enables teams to discover, publish, and integrate SPL features through a
+              centralised repository, fostering collaborative development and reuse of variability assets.
+            </p>
+            <a href="https://github.com/rmedeiros/FeatureCloud" target="_blank" rel="noopener noreferrer" class="card-link">
+              <i class="fa fa-github" aria-hidden="true"></i> View on GitHub
+            </a>
+          </article>
+
+        </div><!-- /portfolio-grid -->
+      </div><!-- /section-inner -->
+    </section><!-- /portfolio -->
+
+    <!-- ═══════════════════════════════════════════ CONTACT -->
+    <section id="contact">
+      <div class="section-inner">
+        <h2 class="section-title section-title--light">Contact</h2>
+        <p class="section-desc section-desc--light">Have a project in mind or want to connect? Drop me a message.</p>
+
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="contactName" name="contactName" required
+                     placeholder="Your name" autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="contactEmail" name="contactEmail" required
+                     placeholder="your@email.com" autocomplete="email" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contactSubject">Subject <span class="optional">(optional)</span></label>
+            <input type="text" id="contactSubject" name="contactSubject"
+                   placeholder="What's this about?" />
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage">Message <span aria-hidden="true">*</span></label>
+            <textarea id="contactMessage" name="contactMessage" rows="6" required
+                      placeholder="Your message&#x2026;"></textarea>
+          </div>
+
+          <div id="form-status" role="status" aria-live="polite"></div>
+
+          <button type="submit" class="btn btn-submit">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-loading" aria-hidden="true">Sending&#x2026;</span>
+          </button>
+        </form>
+
+      </div><!-- /section-inner -->
+    </section><!-- /contact -->
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════ FOOTER -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-social" aria-label="Social links">
+        <a href="https://twitter.com/raulmedeirospe" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/raul-medeiros-perez/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/rmedeiros" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <p class="footer-copy">&copy; 2025 Raul Medeiros</p>
+
+      <button id="back-to-top" aria-label="Back to top">
+        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+      </button>
     </div>
+  </footer>
 
-</section> <!-- About Section End-->
-
-
-<!-- Resume Section
-================================================== -->
-<section id="resume">
-
-    <!-- Education
-    ----------------------------------------------- -->
-    <div class="row education">
-
-        <div class="three columns header-col">
-            <h2><span>Education</span></h2>
-        </div>
-
-        <div class="nine columns main-col">
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>University of the Basque Country (UPV/EHU)</h3>
-                    <p class="info">PhD in Computer Science <span>&bull;</span> <em class="date">September 2019 -
-                        June 2024</em></p>
-
-                </div>
-
-            </div> <!-- item end -->
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>University of Murcia</h3>
-                    <p class="info">Master in New Software Technologies <span>&bull;</span> <em class="date">September
-                        2018 - July 2019</em></p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>University of the Basque Country (UPV/EHU)</h3>
-                    <p class="info">Bachelor degree in Computer Science <span>&bull;</span> <em class="date">September
-                        2013 - November 2017</em></p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-        </div> <!-- main-col end -->
-
-    </div> <!-- End Education -->
-
-
-    <!-- Work
-    ----------------------------------------------- -->
-    <div class="row work">
-
-        <div class="three columns header-col">
-            <h2><span>Work</span></h2>
-        </div>
-
-        <div class="nine columns main-col">
-
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Technology Consultant</h3>
-                    <p class="info">LKS Next S. Coop<span>&bull;</span> <em class="date">September 2024 - Present</em></p>  
-
-                    <p>
-                        Involved in the development of GenAI projects aimed at automating repetitive, non-value-added tasks
-                        for clients. Part of the design and implementation of dataspaces to ensure secure and efficient
-                        data sharing across platforms. Actively participating in several R&D European projects, contributing to innovative
-                        research and development initiatives.
-                    </p>
-    
-                </div>
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Pre-doctoral Researcher</h3>
-                    <p class="info">University of the Basque Country (UPV/EHU) - Onekin Research
-                        Group<span>&bull;</span> <em class="date">September 2018 - August 2024</em></p>
-
-                    <p>
-                        Development of my PhD Thesis. Currently, the main topic of my dissertation is Software Product
-                        Line Engineering (SPLE). Particularly,
-                        I'm working in three different aspects of SPLE:
-                    </p>
-                    <ol>
-                        <li>SPL Onboarding (i.e. the process of incorporating a new developer into an SPL
-                            organization)
-                        </li>
-                        <li>Visualization or Visual Analytics (i.e. the science of analytical reasoning facilitated by
-                            interactive visual interfaces)
-                        </li>
-                        <li>Continuous Deployment (i.e. An extension of Agile practices whereby the user feedback is
-                            extended beyond development to learn from their USAGE)
-                        </li>
-                    </ol>
-
-
-                </div>
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Developer</h3>
-                    <p class="info">Indaba Consultores S.L.
-                        Group<span>&bull;</span> <em class="date">December 2017 - September 2018</em></p>
-
-                    <p>
-                        Migration of a legacy web platform into a microservice (REST) architecture. Frontend relayed on
-                        Hippo CMS while the backend
-                        was implemented using Spring Boot. I was in charge of designing, developing and testing several
-                        microservices. Apart from that,
-                        I also participated in the implementation of a SSO solution for the microservices using
-                        Keycloak. We used Jenkins
-                        for the automation of the deployment, testing and versioning of all the applications and
-                        services.
-                    </p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Software Engineer</h3>
-                    <p class="info">AMPO S. Coop<span>&bull;</span> <em class="date">May 2017 - September 2017</em></p>
-
-
-                    <ol>
-                        <li>Development of my Bacherlor's end project. The project consisted of developing a
-                            database monitoring system using microservices architecture. Microservices were developed
-                            using
-                            Spring Boot following REST. The project also included the deployment of an application
-                            gateway using Netflix's Zuul.
-                        </li>
-                        <li>IT Management of two mobile applications. My job in this aspect was to meet the providers in
-                            charge of the development of those applications, gather and
-                            communicate new requirements and make a follow-up of the development and deployment status
-                            of
-                            both applications.
-                        </li>
-                    </ol>
-
-                </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Gaia Net Exchange</h3>
-                    <p class="info">Junior Developer<span>&bull;</span> <em class="date">October 2016 - January
-                        2017</em></p>
-                    <p>
-                        Thin client development in C# for Gaia Net Exchange platform.
-                    </p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-        </div> <!-- main-col end -->
-
-    </div> <!-- End Work -->
-
-
-    <div class="row publications" id="publications">
-
-        <div class="three columns header-col">
-            <h2><span>Publications</span></h2>
-        </div>
-
-        <div class="nine columns main-col">
-            <div class="row item">
-                <div class="twelve columns">
-                    <h3>How can feature usage be tracked across product variants? Implicit Feedback in Software Product Lines</h3>
-                    <p class="info">Oscar Díaz, Raul Medeiros, Mustafa Al-Hajjaji<span>&bull;</span>
-                        Journal of Systems and Software
-                        <span>&bull;</span> <em class="date">May 2024</em> <span>&bull;</span> <a
-                                title="DOI"  href="https://doi.org/10.1016/j.jss.2024.112013">DOI</a></p>
-                </div>
-            </div> <!-- item end -->
-
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>FEACKER: Platform-based implicit feedback in annotation-based variant management tools</h3>
-                    <p class="info">Raul Medeiros, Oscar Díaz, Xabier Garmendia <span>&bull;</span>
-                        Software Impacts
-                        <span>&bull;</span> <em class="date">July 2024</em> <span>&bull;</span> <a
-                                title="DOI"  href="https://doi.org/10.1016/j.simpa.2024.100688">DOI</a></p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Unleashing the Power of Implicit Feedback in Software Product Lines: Benefits Ahead</h3>
-                    <p class="info">Raul Medeiros, Oscar Díaz, David Benavides <span>&bull;</span>
-                        GPCE 2023: International Conference on Generative Programming: Concepts & Experiences
-                        <span>&bull;</span> <em class="date">July 2024</em> <span>&bull;</span> <a
-                                title="DOI"  href="https://doi.org/10.1145/3624007.3624058">DOI</a></p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Visualizations for the evolution of Variant-Rich Systems: A systematic mapping study. </h3>
-                    <p class="info">Raul Medeiros, Jabier Martinez, Oscar Díaz, Jean-Remy Falleri <span>&bull;</span>
-                        Information and Software Technology
-                        <span>&bull;</span> <em class="date">October 2022</em> <span>&bull;</span> <a
-                                title="DOI"  href="https://doi.org/10.1016/j.infsof.2022.107084">DOI</a></p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Assisting Mentors in Selecting Newcomers’ Next Task in Software Product Lines: A Recommender
-                        System Approach </h3>
-                    <p class="info">Raul Medeiros, Oscar Díaz<span>&bull;</span> International Conference on Advanced
-                        Information Systems Engineering
-                        <span>&bull;</span> <em class="date">June 2022</em> <span>&bull;</span> <a
-                                title="DOI"  href="https://doi.org/10.1007/978-3-031-07472-1_27">DOI</a></p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Visualizing the customization endeavor in product-based-evolving software product lines: a case
-                        of action design research </h3>
-                    <p class="info">Oscar Díaz, Leticia Montalvillo, Raul Medeiros, Maider Azanza, Thomas Fogdal <span>&bull;</span>
-                        Empirical Software Engineering
-                        <span>&bull;</span> <em class="date">May 2022</em> <span>&bull;</span> <a
-                                title="DOI"   href="https://doi.org/10.1016/j.infsof.2022.107084">DOI</a></p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Unburdening onboarding in software product lines</h3>
-                    <p class="info">Raul Medeiros <span>&bull;</span> IEEE/ACM 43rd International Conference on Software
-                        Engineering Companion - Doctoral Symposium
-                        <span>&bull;</span> <em class="date">May 2021</em> <span>&bull;</span> <a
-                                title="DOI"   href="https://doi.org/10.1109/ICSE-Companion52605.2021.00121">DOI</a></p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Onboarding in software product lines: Concept maps as welcome guides</h3>
-                    <p class="info">Maider Azanza, Arantza Irastorza, Raul Medeiros, Oscar Díaz <span>&bull;</span>
-                        IEEE/ACM 43rd International Conference on Software Engineering: Software Engineering Education
-                        and Training (ICSE-SEET)
-                        <span>&bull;</span> <em class="date">May 2021</em> <span>&bull;</span> <a
-                                title="DOI"   href="https://doi.org/10.1109/ICSE-SEET52601.2021.00022">DOI</a></p>
-
-                </div>
-
-            </div> <!-- item end -->
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Change Analysis of #if-def Blocks with FeatureCloud</h3>
-                    <p class="info">Oscar Díaz, Raul Medeiros, Leticia Montalvillo <span>&bull;</span> 23rd
-                        International Systems and Software Product Line Conference
-                        <span>&bull;</span> <em class="date">Sep 2019</em> <span>&bull;</span> <a
-                                title="DOI"   href="https://doi.org/10.1145/3307630.3342386">DOI</a></p>
-
-                </div>
-
-            </div> <!-- item end -->
-        </div> <!-- main-col end -->
-
-    </div> <!-- End Education -->
-
-    <!-- Skills
-    ----------------------------------------------- -->
-    <div class="row skill">
-
-        <div class="three columns header-col">
-            <h2><span>Skills</span></h2>
-        </div>
-
-        <div class="nine columns main-col">
-
-
-            <div class="bars">
-
-                <ul class="skills">
-                    <li><span class="bar-expand iplusd"></span><em>GenAI</em></li>
-                    <li><span class="bar-expand iplusd"></span><em>R&D</em></li>
-                    <li><span class="bar-expand python"></span><em>Python</em></li>
-                    <li><span class="bar-expand python"></span><em>Langchain</em></li>
-                    <li><span class="bar-expand dataspaces"></span><em>Dataspaces</em></li>
-                    <li><span class="bar-expand spl"></span><em>Software Product Lines</em></li>
-                    <li><span class="bar-expand java"></span><em>Java</em></li>
-                    <li><span class="bar-expand management"></span><em>Planning & Management</em></li>
-                    <li><span class="bar-expand agile"></span><em>Agile Development</em></li>
-                    <li><span class="bar-expand devops"></span><em>DevOps</em></li>
-                </ul>
-
-            </div><!-- end skill-bars -->
-
-        </div> <!-- main-col end -->
-
-    </div> <!-- End skills -->
-
-</section> <!-- Resume Section End-->
-
-
-<!-- Portfolio Section
-================================================== -->
-<section id="portfolio">
-
-    <div class="row">
-
-        <div class="twelve columns collapsed">
-
-            <h2>Check Out Some of My Works.</h2>
-
-            <!-- portfolio-wrapper -->
-            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-01" title="">
-                            <img alt="CustomDIFF project icon" src="images/portfolio/customdiff.ico">
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>CustomDIFF</h5>
-                                    <p>Spring Boot App</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div> <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-02" title="">
-                            <img alt="FeatureCloud project icon" src="images/portfolio/featurecloud.ico">
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>FeatureCloud</h5>
-                                    <p>Spring Boot App</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div> <!-- item end -->
-
-
-            </div> <!-- portfolio-wrapper end -->
-
-        </div> <!-- twelve columns end -->
-
-
-        <!-- Modal Popup
-         --------------------------------------------------------------- -->
-
-        <div id="modal-01" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/customdiff.ico" alt="CustomDiff project ico"/>
-
-            <div class="description-box">
-                <h4>CustomDIFF</h4>
-                <p>CustomDIFF is a web-based Visual Analytics tool for Software Product Lines Customization Analysis.
-                    CustomDIFF uses pure::variants and Git as the variability manager and code repository,
-                    respectively.</p>
-                <span class="categories"><i class="fa fa-tag"></i>SPL, Visualization</span>
-            </div>
-
-            <div class="link-box">
-                <a title="CustomDIFF"  href="https://github.com/onekin/CustomDiff" target="_blank">Details</a>
-                <a title="Close"  class="popup-modal-dismiss">Close</a>
-            </div>
-
-        </div><!-- modal-01 End -->
-
-        <div id="modal-02" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/featurecloud.ico" alt="FeatureCloud project ico"/>
-
-            <div class="description-box">
-                <h4>FeatureCloud</h4>
-                <p>FeatureCloud is a tag based visualization tool used to improve comprehensibility and maintenance of
-                    preprocessor-based SPL code</p>
-                <span class="categories"><i class="fa fa-tag"></i>SPL, Visualization</span>
-            </div>
-
-            <div class="link-box">
-                <a title="FeatureCloud"  href="https://github.com/rmedeiros/FeatureCloud" target="_blank">Details</a>
-                <a title="Close"  class="popup-modal-dismiss">Close</a>
-            </div>
-
-        </div><!-- modal-02 End -->
-
-
-    </div> <!-- row End -->
-
-</section> <!-- Portfolio Section End-->
-
-
-<!-- Testimonials Section
-================================================== -->
-<section id="testimonials">
-
-    <div class="text-container">
-
-        <div class="row">
-
-            <div class="two columns header-col">
-
-                <h2><span>Liked Quotes</span></h2>
-
-            </div>
-
-            <div class="ten columns flex-container">
-
-                <div class="flexslider">
-
-                    <ul class="slides">
-
-                        <li>
-                            <blockquote>
-                                <p>Only a fool worries over what he can't control.
-                                </p>
-                                <cite>The Wise Man's Fear - Patrick Rothfuss</cite>
-                            </blockquote>
-                        </li> <!-- slide ends -->
-
-                        <li>
-                            <blockquote>
-                                <p>“To love the journey is to accept no such end. I have found, through painful
-                                    experience, that the most important step a person can take is always the next one.”
-                                </p>
-                                <cite>Oathbringer - Brandon Sanderson</cite>
-                            </blockquote>
-                        </li> <!-- slide ends -->
-
-                    </ul>
-
-                </div> <!-- div.flexslider ends -->
-
-            </div> <!-- div.flex-container ends -->
-
-        </div> <!-- row ends -->
-
-    </div>  <!-- text-container ends -->
-
-</section> <!-- Testimonials Section End-->
-
-
-<!-- footer
-================================================== -->
-<footer>
-
-    <div class="row">
-
-        <div class="twelve columns">
-
-            <ul class="social-links">
-                <li><a href="https://twitter.com/RaulMedeirosP"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/raul-medeiros-8328b2143/"><i class="fa fa-linkedin"></i></a>
-                <li><a href="https://github.com/rmedeiros"><i class="fa fa-github"></i></a></li>
-            </ul>
-
-            <ul class="copyright">
-                <li>&copy; Copyright 2014 CeeVee</li>
-                <li>Design by <a href="http://www.styleshout.com/" title="Styleshout" target="_blank">Styleshout</a>
-                </li>
-            </ul>
-
-        </div>
-
-        <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
-
-    </div>
-
-</footer> <!-- Footer End-->
-
-<!-- Java Script
-================================================== -->
-<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-
-<script src="js/jquery.flexslider.js"></script>
-<script src="js/waypoints.js"></script>
-<script src="js/jquery.fittext.js"></script>
-<script src="js/magnific-popup.js"></script>
-<script src="js/init.js"></script>
-
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,63 @@
+---
+export interface Props {
+    ui: any;
+    work: any[];
+    education: any[];
+}
+
+const { ui, work, education } = Astro.props;
+---
+
+<section id="timeline" class="py-24 bg-primary text-gray-300">
+    <div class="container mx-auto px-6">
+        <div class="mb-16">
+            <h2 class="text-accent font-bold tracking-widest uppercase mb-4 text-sm">Experience</h2>
+            <h3 class="text-3xl md:text-5xl font-bold text-white mb-6">Professional Journey.</h3>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+            <div class="relative border-l-2 border-gray-800 space-y-12 pl-8 md:pl-12">
+                
+                {work.map((job: any) => (
+                    <div class="relative group">
+                        <!-- Type Indicator (Work) -->
+                        <div class="absolute -left-[41px] md:-left-[57px] top-0 w-8 h-8 md:w-10 md:h-10 rounded-full border-4 border-primary bg-gray-800 flex items-center justify-center group-hover:bg-accent group-hover:text-primary transition-colors text-gray-500">
+                            <i class="fa fa-briefcase text-xs md:text-sm"></i>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
+                             <h4 class="text-2xl font-bold text-white group-hover:text-accent transition-colors">{job.name}</h4>
+                             <span class="text-sm font-mono text-gray-500 bg-gray-900 px-3 py-1 rounded inline-block md:inline w-fit mt-2 md:mt-0 border border-gray-800">{job.startDate} - {job.endDate}</span>
+                        </div>
+                        
+                        <div class="text-lg font-medium text-gray-400 mb-4">{job.position}</div>
+                        <p class="text-gray-500 leading-relaxed text-base border-l-2 border-gray-800 pl-4 hover:border-accent/30 transition-colors">
+                            {job.summary}
+                        </p>
+                    </div>
+                ))}
+
+                <!-- Divider -->
+                <div class="h-px bg-gray-800 w-full my-12"></div>
+                
+                 {education.map((edu: any) => (
+                    <div class="relative group">
+                        <!-- Type Indicator (Education) -->
+                        <div class="absolute -left-[41px] md:-left-[57px] top-0 w-8 h-8 md:w-10 md:h-10 rounded-full border-4 border-primary bg-gray-800 flex items-center justify-center group-hover:bg-highlight group-hover:text-white transition-colors text-gray-500">
+                            <i class="fa fa-graduation-cap text-xs md:text-sm"></i>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
+                             <h4 class="text-xl font-bold text-white group-hover:text-highlight transition-colors">{edu.institution}</h4>
+                             <span class="text-sm font-mono text-gray-500 bg-gray-900 px-3 py-1 rounded inline-block md:inline w-fit mt-2 md:mt-0 border border-gray-800">{edu.endDate}</span>
+                        </div>
+                        
+                        <div class="text-lg font-medium text-gray-400 mb-2">{edu.studyType} in {edu.area}</div>
+                    </div>
+                ))}
+
+            </div>
+        </div>
+
+    </div>
+</section>
